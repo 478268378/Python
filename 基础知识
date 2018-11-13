@@ -1,0 +1,78 @@
+1.字符串的常见操作方法
+
+	s = "hello python
+	
+	查找的方法:
+		s.find(str,0,10) 查找在哪,返还的是索引  没有就打印-1
+                s.rfind(str,0,10) 从右边开始查找在哪,返还的是索引  没有就打印-1
+		s.index(str,0,10)查找在哪,返还的是索引  没有就报错
+                s.rindex(str,0,10)从右边开始查找在哪,返还的是索引  没有就报错
+	
+	统计的方法:
+		s.count(str) 统计有多少个
+		
+	判断的方法:
+		s.isalpha()  看s里面是不是都是字母
+		s.isdigit()  看s里面是不是都是数字
+		s.isdecimal()看s里面是不是都是数字
+		
+		s.isupper()  看s里面是不是都是大写字母
+		s.islower()  看s里面是不是都是小写字母
+		
+		s.startswith("n")看s里面首部分是不是n
+		s.endswith("n")     看s里面尾部分是不是n
+	
+	分割的方法:
+		s.split("o")  把所有的o的两边分割开，不保留o
+                s.partition("o")把第一个出现的o分割开并保留o 分割三分
+                s.rpartition("o")从右边开始把第一个出现的o分割开并保留o 分割三分
+		
+		
+	替换的方法:
+		s.replace(odlstr,newstr,count) count是从左到右替换几个newstr，
+                                                    不写就默认替换所有的
+		
+	大小写转换的方法:
+		s.upper()将s所有的小写转成大写
+		s.lower()将s所有的大写转成小写
+                s.title()把字符串的每个单词首字母大写
+                s.capitalize()把字符串的第一个字符大写
+
+	去掉空格:
+		s.strip()去掉左右两端的空格
+        对齐：
+                s.ljust(n)向左对齐，n是对齐多少个字符
+                s.rjust(n)向右对齐
+                s.center(n)向中对齐
+
+                s.rstrip()删除s字符串末尾的空白字符
+                s.lstrip()删除s左边的空白字符
+
+                s.join()s中每个元素后面插入str,构造出一个新的字符串
+
+
+
+  2.列表
+        list1=["hello","python","android",10,3.14,True]
+         list1[2]   拿出指定位置索引2位置的元素
+          len(list1)  此列表的长度
+         list1.append("PHP"） 在列表的最后添加"PHP"在列表中可以重复使用
+         list1.insert(4,"UI") 表示在第四个索引的位置插入一个"UI"
+         list1[2]="大数据"  把索引2的元素替换成"大数据"
+         list1.remove("大数据")  在列表中把大数据删掉，但列表中没有这个数据时会报错
+         list1.pop(2)  在列表指定位置删除索引2元素    
+         list1.clear（） 清空列表
+         list1.sort()  从小到大依次排序
+         list1.sort(key=int) 列表里面有数字和字符串也可以排序
+         list1.sort（reverse=True）倒序   从大到小排序
+         列表排序sort()没有返回值，想有返回值用sorted()
+         
+       enumerate()方法:
+                  chars = ['a', 'b', 'c', 'd']
+                  >>> for i, chr in enumerate(chars):
+                  ...     print i, chr
+                  ...
+                  0 a
+                  1 b
+                  2 c
+                  3 d   
